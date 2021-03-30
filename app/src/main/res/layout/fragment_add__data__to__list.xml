@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="isLoading"
+            type="Boolean" />
+        <import type="android.view.View"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.Add_Data_To_List_Fragment"
+        android:background="@color/white">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/prog_bar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:visibility="@{isLoading?View.VISIBLE:View.GONE,default=gone}"
+                    />
+                <RelativeLayout
+                    android:id="@+id/rel_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#ffffff">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="todo"
+                        android:textSize="20sp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                <View
+                    android:id="@+id/v"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000"
+                    android:layout_below="@+id/rel_bar"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/v"
+                    android:padding="5dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="todo title"
+                            android:textSize="18sp"
+                            android:textColor="#000"
+                            android:layout_marginTop="30dp"/>
+                        <EditText
+                            android:id="@+id/edt_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            android:hint="write your title"
+                            android:gravity="center_vertical|start"
+                            android:padding="5dp"
+                            android:background="@drawable/edt_back"
+                            android:layout_marginTop="10dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="30dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="todo description"
+                            android:textSize="18sp"
+                            android:textColor="#000"/>
+                        <EditText
+                            android:id="@+id/edt_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="270dp"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            android:gravity="top|start"
+                            android:padding="5dp"
+                            android:background="@drawable/edt_back"
+                            android:layout_marginTop="10dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="30dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="select time"
+                            android:textSize="18sp"
+                            android:textColor="#000"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="10dp">
+                            <EditText
+                                android:id="@+id/edt_date"
+                                android:layout_width="220dp"
+                                android:layout_height="40dp"
+                                android:hint="   \\     \\  "
+                                android:text=""
+                                android:textColor="#000"
+                                android:textSize="18sp"
+                                android:gravity="center_vertical"
+                                android:padding="5dp"
+                                android:background="@drawable/edt_back"
+                                android:editable="false"
+                                />
+                            <ImageView
+                                android:id="@+id/select_cal_btn"
+                                android:layout_width="50dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_calendar"
+                                android:layout_marginLeft="20sp"
+                                app:tint="#086DEA"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/save_btn"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:text="Save"
+                        android:textSize="18sp"
+                        android:textColor="#fff"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:background="#086DEA"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginBottom="20dp"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

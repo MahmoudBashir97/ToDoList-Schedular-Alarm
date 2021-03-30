@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@drawable/edt_back">
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="todo title"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 Am 25/1/2021"
+            android:textSize="18sp"
+            android:textColor="#0C9312"
+            android:textStyle="normal"
+            android:layout_gravity="end"/>
+
+        <TextView
+            android:id="@+id/txt_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="max 2 lines of descriptions"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:lines="2"
+            android:layout_marginTop="5dp"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
